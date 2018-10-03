@@ -16,12 +16,15 @@ class AddListItem extends Component {
             return;
         } else {
             this.props.addFood(this.state.foodInput);
+            this.setState({
+                foodInput: ''
+            })
         }
     }
     render() {
         return (
             <form>
-                <input onChange={(e) => this.handleOnChange(e)} type='text' />
+                <input onChange={(e) => this.handleOnChange(e)} type='text' value={this.state.foodInput} />
                 <button onClick={(e) => this.handleOnSubmit(e)} type='submit'>Add Food</button>
             </form>
         );
