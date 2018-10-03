@@ -7,8 +7,8 @@ class List extends Component {
     render() {
         return (
             <ul>
-                {this.props.todoListArray.map((item) => {
-                    return <li key={item}><ListItem item={item} removeListItem={this.props.removeListItem} /></li>
+                {this.props.todoListArray.map((item, index) => {
+                    return <li key={item}><ListItem count={index + 1} item={item} removeListItem={this.props.removeListItem} /></li>
                 })}
             </ul>
         );
