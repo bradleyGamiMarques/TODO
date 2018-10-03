@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import "./addListItem.css";
 
 class AddListItem extends Component {
     state = {
@@ -12,10 +11,13 @@ class AddListItem extends Component {
     }
     handleOnSubmit = (e) => {
         e.preventDefault();
-        if (this.state.itemInput === '') {
+        const trimmedTextInput = this.state.itemInput.trim();
+
+        if (trimmedTextInput === '') {
             return;
+            
         } else {
-            this.props.addListItem(this.state.itemInput);
+            this.props.addListItem(trimmedTextInput);
             this.setState({
                 itemInput: ''
             })

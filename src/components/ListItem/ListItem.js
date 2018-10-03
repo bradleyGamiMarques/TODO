@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import "./listItem.css";
 
 class ListItem extends Component {
     render() {
+        const {count, item, removeListItem} = this.props;
         return (
             <div>
-                <p>{this.props.count}. {this.props.item}</p>
-                <button onClick={() => this.props.removeListItem(this.props.item)}>X</button>
+                <p>{count}. {item}</p>
+                <button onClick={() => removeListItem(item)}>X</button>
             </div>
         )
     }
