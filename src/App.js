@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import List from './components/List';
 import AddListItem from './components/AddListItem';
+import List from './components/List';
+import Header from './components/Header';
 
 class App extends Component {
   state = {
@@ -33,6 +34,7 @@ class App extends Component {
   render() {
     return (
       <div>
+        <Header/>
         <List todoListArray={this.state.todoListArray} removeListItem={this.removeListItem} />
         <AddListItem addListItem={this.addListItem} />
       </div>
