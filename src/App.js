@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import List from './components/List/List';
+import AddListItem from './components/AddListItem/AddListItem';
 
 class App extends Component {
+  state = {
+    foodArray: ['apple', 'banana', 'carrot']
+  }
+  addFood = (food) => {
+    let arr = this.state.foodArray.slice();
+    arr.push(food);
+    this.setState({
+      foodArray: arr
+    })
+  }
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+      <div>
+      <List foodArray={this.state.foodArray}/>
+      <AddListItem addFood={this.addFood}/>
       </div>
     );
   }
