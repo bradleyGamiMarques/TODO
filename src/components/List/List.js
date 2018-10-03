@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import ListItem from '../ListItem/ListItem';
-import './List.css';
 
 class List extends Component {
-    state = {}
     render() {
+        const { removeListItem, todoListArray } = this.props;
         return (
             <ul>
-                {this.props.todoListArray.map((item, index) => {
-                    return <li key={item}><ListItem count={index + 1} item={item} removeListItem={this.props.removeListItem} /></li>
+                {todoListArray.map((item, index) => {
+                    return (
+                        <li key={item + index}>
+                            <ListItem
+                                count={index + 1}
+                                item={item}
+                                removeListItem={removeListItem} />
+                        </li>
+                    )
                 })}
             </ul>
         );
