@@ -5,8 +5,8 @@ class ListItem extends Component {
     render() {
         return (
             <div>
-                <p>{this.props.food}</p>
-                <button onClick={()=> this.props.removeFood(this.props.food)}>X</button>
+                <p>{this.props.item}</p>
+                <button onClick={() => this.props.removeListItem(this.props.item)}>X</button>
             </div>
         )
     }

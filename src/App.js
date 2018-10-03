@@ -4,30 +4,37 @@ import AddListItem from './components/AddListItem/AddListItem';
 
 class App extends Component {
   state = {
-    foodArray: ['apple', 'banana', 'carrot']
+    todoListArray: ['apple', 'banana', 'carrot']
   }
-  addFood = (food) => {
-    let arr = this.state.foodArray.slice();
-    arr.push(food);
+  addListItem = (item) => {
+    // Create a shallow copy of our todoListArray.
+    let arr = this.state.todoListArray.slice();
+    // Add the item to the end of our array.
+    arr.push(item);
+    // Set the state.
     this.setState({
-      foodArray: arr
+      todoListArray: arr
     });
   }
-  removeFood = (food) => {
-    let arr = this.state.foodArray.slice();
-    const index = arr.indexOf(food);
-    if (index > -1){
+  removeListItem = (item) => {
+    // Create a shallow copy of our todoListArray.
+    let arr = this.state.todoListArray.slice();
+    // Get the index of the item we want to remove from our array
+    const index = arr.indexOf(item);
+    if (index > -1) {
+      // Splice takes two arguments. Which item to remove and how many items.
       arr.splice(index, 1);
     }
+    // Set the state.
     this.setState({
-      foodArray: arr
+      todoListArray: arr
     });
   }
   render() {
     return (
       <div>
-      <List foodArray={this.state.foodArray} removeFood={this.removeFood}/>
-      <AddListItem addFood={this.addFood}/>
+        <List todoListArray={this.state.todoListArray} removeListItem={this.removeListItem} />
+        <AddListItem addListItem={this.addListItem} />
       </div>
     );
   }
