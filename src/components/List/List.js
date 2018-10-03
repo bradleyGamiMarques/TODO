@@ -3,12 +3,12 @@ import ListItem from '../ListItem/ListItem';
 import './List.css';
 
 class List extends Component {
-    state = {  }
+    state = {}
     render() {
         return (
             <ul>
-                {this.props.foodArray.map((food)=> {
-                    return <li key={food}><ListItem food={food} removeFood={this.props.removeFood}/></li>
+                {this.props.todoListArray.map((item) => {
+                    return <li key={item}><ListItem item={item} removeListItem={this.props.removeListItem} /></li>
                 })}
             </ul>
         );
