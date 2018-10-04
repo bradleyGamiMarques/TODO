@@ -6,7 +6,7 @@ class ListItem extends Component {
         return (
             <div>
                 <p>{count}. {item}</p>
-                <button onClick={() => removeListItem(item)}>X</button>
+                <button className="button--link" onClick={() => removeListItem(item)}>X</button>
             </div>
         )
     }

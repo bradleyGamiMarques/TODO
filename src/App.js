@@ -3,6 +3,7 @@ import AddListItem from './components/AddListItem';
 import List from './components/List';
 import Header from './components/Header';
 import RemoveAllListItems from './components/RemoveAllListItems';
+import './App.css'
 
 class App extends Component {
   state = {
@@ -40,7 +41,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className={'App'}>
         <Header />
         <List todoListArray={this.state.todoListArray} removeListItem={this.removeListItem} />
         <AddListItem addListItem={this.addListItem} />
