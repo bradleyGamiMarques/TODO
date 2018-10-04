@@ -1,0 +1,33 @@
+.hamburger-menu-open{
+    background-color: #20222b;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 500px;
+
+}
+.close-button{
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+}
+.hamburger-menu-closed{
+    background-color: #20222b;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    transition: all 0.5s ease;
+    width: 300px;
+    height: 500px;
+
+}

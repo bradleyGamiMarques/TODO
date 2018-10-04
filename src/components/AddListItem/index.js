@@ -1,2 +1,2 @@
-import './addListItem.css'
-export {default} from './AddListItem'
+import './addListItem.css';
+export {default} from './AddListItem';
