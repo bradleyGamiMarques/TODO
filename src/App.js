@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import AddListItem from './components/AddListItem';
 import List from './components/List';
 import Header from './components/Header';
+import RemoveAllListItems from './components/RemoveAllListItems';
 
 class App extends Component {
   state = {
@@ -16,7 +17,12 @@ class App extends Component {
     this.setState({
       todoListArray: arr
     });
-  }
+  };
+
+  removeAllListItems = () => {
+    this.setState(() => ({ todoListArray: [] }));
+  };
+
   removeListItem = (item) => {
     // Create a shallow copy of our todoListArray.
     let arr = this.state.todoListArray.slice();
@@ -30,13 +36,17 @@ class App extends Component {
     this.setState({
       todoListArray: arr
     });
-  }
+  };
+
   render() {
     return (
       <div>
-        <Header/>
+        <Header />
         <List todoListArray={this.state.todoListArray} removeListItem={this.removeListItem} />
         <AddListItem addListItem={this.addListItem} />
+        { this.state.todoListArray.length > 0 &&
+          <RemoveAllListItems removeAllListItems={this.removeAllListItems}/>
+        }
       </div>
     );
   }
