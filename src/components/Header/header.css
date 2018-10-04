@@ -12,3 +12,28 @@ header{
 h1{
     margin:0;
 }
+.hamburger-menu-button{
+    align-items: center;
+    background: none;
+    border: none;
+    margin-top: 8px;
+    margin-right: 8px;
+    width: 40px;
+    height: 40px;
+}
+.hamburger-menu-button:hover{
+    cursor: pointer;
+}
+.header-flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.header-content-flex-container{
+    display: flex;
+    flex-direction: column;
+}
+.header-hamburger-menu-flex-container{
+    display: flex;
+    flex-direction: row;
+}
