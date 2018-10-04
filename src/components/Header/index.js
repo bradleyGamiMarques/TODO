@@ -1,2 +1,2 @@
-import './header.css'
-export {default} from './Header'
+import './header.css';
+export {default} from './Header';

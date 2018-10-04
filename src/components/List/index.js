@@ -1,2 +1,2 @@
-import './list.css'
-export {default} from './List'
+import './list.css';
+export {default} from './List';

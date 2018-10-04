@@ -7,7 +7,8 @@ import './App.css'
 
 class App extends Component {
   state = {
-    todoListArray: ['apple', 'banana', 'carrot']
+    todoListArray: ['apple', 'banana', 'carrot'],
+    hamburgerMenuVisible: false
   }
   addListItem = (item) => {
     // Create a shallow copy of our todoListArray.
