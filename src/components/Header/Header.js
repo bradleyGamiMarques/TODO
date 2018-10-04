@@ -14,14 +14,15 @@ class Header extends Component {
     render() {
         return (
             <header className='header-flex-container'>
+            <section className='menu-overlay' hidden={!this.state.isHamburgerMenuOpen} onClick={() => this.toggleMenu()}/>
                 <section className='header-content-flex-container'>    
                     <h1 className='headerTitle'>To-Do-List</h1>
                     <h2>Organize your life</h2>
                 </section>
                 <section className='header-hamburger-menu-flex-container'>
-                <button onClick={()=> this.toggleMenu()} className='hamburger-menu-button'><MenuButton/></button>
+                <button  className='hamburger-menu-button' onClick={()=> this.toggleMenu()}><MenuButton/></button>
                 </section>
-                <HamburgerMenu/>
+                <HamburgerMenu toggleMenu={this.toggleMenu} isHamburgerMenuOpen={this.state.isHamburgerMenuOpen}/>
             </header>
         );
     }
