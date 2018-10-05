@@ -4,3 +4,21 @@
     color: #a5afd7;
     padding:0;
 } 
+
+.list-item-card{
+    background-color: #d3d3d3;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    width: 100%;
+    height: 80px;
+
+}
+.list-item-card > p{
+    margin-left: 20px;
+}
+
+.list-item-card > button{
+    margin-right: 20px;
+}

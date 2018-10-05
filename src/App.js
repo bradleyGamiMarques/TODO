@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import AddListItem from './components/AddListItem';
 import List from './components/List';
 import Header from './components/Header';
-import RemoveAllListItems from './components/RemoveAllListItems';
 import './App.css'
 
 class App extends Component {
@@ -42,13 +40,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className={'App'}>
+      <div className='App'>
         <Header />
-        <List todoListArray={this.state.todoListArray} removeListItem={this.removeListItem} />
-        <AddListItem addListItem={this.addListItem} />
-        { this.state.todoListArray.length > 0 &&
-          <RemoveAllListItems removeAllListItems={this.removeAllListItems}/>
-        }
+        <List addListItem={this.addListItem} removeAllListItems={this.removeAllListItems} todoListArray={this.state.todoListArray} removeListItem={this.removeListItem} />
       </div>
     );
   }

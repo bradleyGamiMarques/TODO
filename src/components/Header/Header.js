@@ -16,8 +16,8 @@ class Header extends Component {
             <header className='header-flex-container'>
             <section className='menu-overlay' hidden={!this.state.isHamburgerMenuOpen} onClick={() => this.toggleMenu()}/>
                 <section className='header-content-flex-container'>    
-                    <h1 className='headerTitle'>To-Do-List</h1>
-                    <h2>Organize your life</h2>
+                    <h1>To-Do-List</h1>
+                    <h3>Organize your life</h3>
                 </section>
                 <section className='header-hamburger-menu-flex-container'>
                 <button  className='hamburger-menu-button' onClick={()=> this.toggleMenu()}><MenuButton/></button>
