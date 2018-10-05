@@ -25,7 +25,7 @@ class AddListItem extends Component {
     }
     render() {
         return (
-            <form>
+            <form className='add-list-item-form'>
                 <input onChange={(e) => this.handleOnChange(e)} type='text' value={this.state.itemInput} />
                 <button onClick={(e) => this.handleOnSubmit(e)} type='submit'>Add Item</button>
             </form>

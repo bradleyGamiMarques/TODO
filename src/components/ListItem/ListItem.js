@@ -4,10 +4,10 @@ class ListItem extends Component {
     render() {
         const {count, item, removeListItem} = this.props;
         return (
-            <div>
+            <section className='list-item-card'>
                 <p>{count}. {item}</p>
                 <button className="button--link" onClick={() => removeListItem(item)}>X</button>
-            </div>
+            </section>
         )
     }
 }

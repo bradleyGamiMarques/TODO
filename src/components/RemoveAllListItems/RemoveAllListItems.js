@@ -4,7 +4,7 @@ class RemoveAllListItems extends Component {
   
     render() {
         return (
-           <button onClick={this.props.removeAllListItems}>Remove All</button> 
+           <button className='removeAllButton' onClick={this.props.removeAllListItems}>Remove All</button> 
         );
     }
 }

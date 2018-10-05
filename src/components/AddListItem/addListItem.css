@@ -1,0 +1,17 @@
+.add-list-item-form{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+    width: 100%;
+}
+.add-list-item-form > button{
+    background-color: blueviolet;
+    color: #FFF;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.add-list-item-form > input{
+    font-size: 18px;
+    width: 77%;
+}
